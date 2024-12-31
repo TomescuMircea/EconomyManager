@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="EconomyManager.UWP__Universal_Windows_.Views.Wallets.ShareWalletFormPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EconomyManager.UWP__Universal_Windows_.Views.Wallets"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Add new user to the current wallet"
+                   Style="{StaticResource HeaderTextBlockStyle}" />
+            <CommandBar x:Name="mainCommandBar"
+            Grid.Column="1"
+            VerticalAlignment="Center"
+            Background="Transparent"
+            OverflowButtonVisibility="Collapsed"
+            DefaultLabelPosition="Right">
+                <AppBarButton x:Name="btnSave"
+                  Icon="Save"
+                  Label="Save"
+                  Click="btnSave_Click"
+                  IsEnabled="{x:Bind UserViewModel.Valid , Mode=OneWay}">
+                    <FlyoutBase.AttachedFlyout>
+                        <Flyout>
+                            <Border Background="Red" Padding="10">
+                                <TextBlock Text="The user is already associated with this wallet or the email is incorrect."
+                   Foreground="White"/>
+                            </Border>
+                        </Flyout>
+                    </FlyoutBase.AttachedFlyout>
+                </AppBarButton>
+                <AppBarButton x:Name="btnCancel"
+                  Icon="Cancel"
+                  Label="Cancel"
+                  Click="btnCancel_Click"/>
+            </CommandBar>
+        </Grid>
+        <StackPanel Grid.Row="1">
+            <TextBox x:Name="tbEmail" Header="Email"
+                 Text="{x:Bind UserViewModel.UserEmail, Mode=TwoWay, 
+            UpdateSourceTrigger=PropertyChanged}"/>
+            <Border Background="Red" BorderBrush="Black" BorderThickness="2" Margin="0.5"
+                Visibility="{x:Bind UserViewModel.Invalid,Mode=OneWay}">
+                <TextBlock Text="Invalid Email" Foreground="White"/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>

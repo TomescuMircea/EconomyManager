@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="EconomyManager.UWP__Universal_Windows_.Views.Movements.AddMovementPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EconomyManager.UWP__Universal_Windows_.Views.Movements"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <!--<Grid>
+        <StackPanel>
+            <TextBox x:Name="Quantity"
+                 Header="Quantity" 
+                 Text="{x:Bind QuantityText, Mode=TwoWay}"
+                 BeforeTextChanging="TextBox_OnBeforeTextChanging"/>
+
+            <ComboBox Name="CategoriesComboBox"
+                    ItemsSource="{x:Bind Categories, Mode=OneWay}"
+                    SelectedIndex="0"
+                    Header="Categories" Width="300" Visibility="Visible"/>
+
+            <DatePicker Header="Pick a date" 
+                    Date="{x:Bind DateTime, Mode=TwoWay}"/>
+
+        </StackPanel>
+    </Grid>-->
+</Page>

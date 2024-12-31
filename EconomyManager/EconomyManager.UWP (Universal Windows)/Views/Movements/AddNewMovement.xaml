@@ -1,0 +1,91 @@
+﻿<Page
+    x:Class="EconomyManager.UWP__Universal_Windows_.Views.Movements.AddNewMovement"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EconomyManager.UWP__Universal_Windows_.Views.Movements"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1440" Height="1024">
+
+    <Grid Width="1440" Height="1024">
+        <TextBlock x:Name="TxtBlockAddNewMovement" HorizontalAlignment="Left" Height="110" Margin="83,140,0,0" TextWrapping="Wrap" Text="Add New Movement" VerticalAlignment="Top" Width="482" FontSize="48"/>
+        <CalendarDatePicker Height="67" Margin="85,363,0,0" VerticalAlignment="Top" Width="439" FontSize="20"/>
+        <TextBox x:Name="TxtBoxDescription" CornerRadius="10" HorizontalAlignment="Left" Height="83" Margin="83,625,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Width="441" FontSize="20"/>
+        <TextBox x:Name="TxtBoxTotal" CornerRadius="10" HorizontalAlignment="Left" Height="83" Margin="83,770,0,0" TextWrapping="Wrap" Text="Total" VerticalAlignment="Top" Width="441" FontSize="20"/>
+        <TextBlock x:Name="TxtBlockExpenseReceipt" HorizontalAlignment="Left" Height="67" Margin="790,276,0,0" TextWrapping="Wrap" Text="Expense receipt images" VerticalAlignment="Top" Width="460" FontSize="20"/>
+
+
+        <Button x:Name="customButton" Content="" Margin="85,276,0,0" VerticalAlignment="Top">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid Width="439
+                          " Height="50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100*" />
+                            <ColumnDefinition Width="81*" />
+                            <ColumnDefinition Width="19*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Prima secțiune a butonului -->
+                        <Border x:Name="firstHalf" Grid.Column="0" Background="Purple" />
+
+                        <!-- A doua secțiune a butonului -->
+                        <Border x:Name="secondHalf" Grid.Column="1" Background="Gray" Grid.ColumnSpan="2" />
+
+                        <!-- Adăugați conținutul butonului aici, dacă este necesar -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Height="25" Foreground="gray" Margin="126,287,0,0" TextWrapping="Wrap" Text="Expense" VerticalAlignment="Top" Width="135" FontWeight="Bold" FontSize="22" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Height="25" Foreground="Purple" Margin="352,287,0,0" TextWrapping="Wrap" Text="Incomes" VerticalAlignment="Top" Width="135" FontWeight="Bold" FontSize="22" TextAlignment="Center"/>
+        <Grid>
+            <Button x:Name="BtnCancel" Foreground="DarkGray" Background="Purple" CornerRadius="10" Content="Cancel" Height="48" Margin="777,712,0,0" VerticalAlignment="Top" Width="164" FontSize="24" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+
+            <FontIcon Glyph="&#xEA8F;" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,590,176" Height="50" Width="90"/>
+            <FontIcon Glyph="&#xEA8A;" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,216,176" Height="50" Width="90"/>
+            <FontIcon Glyph="&#xE932;" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,330,175" Height="50" Width="90"/>
+            <FontIcon Glyph="&#xE7B8;" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,499,175" Height="50" Width="90"/>
+            <FontIcon Glyph="&#xEA3B;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="932,782,0,0" Height="80" Width="110" Foreground="Orange" FontSize="36"/>
+            <FontIcon Glyph="&#xE710;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="942,797,0,0" Height="50" Width="90" Foreground="Black" FontWeight="Bold" FontSize="24"/>
+
+            <TextBlock x:Name="TxtBlockNotifications" HorizontalAlignment="Left" Height="36" Margin="765,852,0,0" TextWrapping="Wrap" Text="Notifications" VerticalAlignment="Top" Width="91"/>
+            <TextBlock x:Name="TxtBlockHome" HorizontalAlignment="Left" Height="27" Margin="1160,851,0,0" TextWrapping="Wrap" Text="Home" VerticalAlignment="Top" Width="46"/>
+            <TextBlock x:Name="TxtBlockReceipts" HorizontalAlignment="Left" Height="26" Margin="869,852,0,0" TextWrapping="Wrap" Text="Receipts" VerticalAlignment="Top" Width="61"/>
+            <TextBlock x:Name="TxtBlockAdd" HorizontalAlignment="Left" Height="27" Margin="973,852,0,0" TextWrapping="Wrap" Text="Add" VerticalAlignment="Top" Width="46"/>
+            <TextBlock x:Name="TxtBlockStatistics" HorizontalAlignment="Left" Height="27" Margin="1038,851,0,0" TextWrapping="Wrap" Text="Statistics" VerticalAlignment="Top" Width="61"/>
+            <Button x:Name="BtnSave" Foreground="DarkGray" Background="Purple" CornerRadius="10" Content="Save" Height="48" Margin="1033,712,0,0" VerticalAlignment="Top" Width="164" FontSize="24" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <ComboBox Height="60" Margin="85,510,0,0" Width="438" IsDropDownOpen="True"/>
+
+        </Grid>
+
+        <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="250" Width="250" Margin="720,397,0,0" VerticalAlignment="Top" />
+        <FontIcon Glyph="&#xEA3B;" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="735,0,0,0" Height="160" Width="220" Foreground="Orange" FontSize="36"/>
+        <FontIcon Glyph="&#xE710;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="764,466,0,0" Height="88" Width="162" Foreground="Black" FontWeight="Bold" FontSize="24"/>
+        <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="250" Width="250" Margin="1005,399,0,0" VerticalAlignment="Top" />
+        <FontIcon Glyph="&#xEA3B;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1020,434,0,0" Height="160" Width="220" Foreground="Orange" FontSize="36"/>
+        <FontIcon Glyph="&#xE710;" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="1049,0,0,0" Height="88" Width="162" Foreground="Black" FontWeight="Bold" FontSize="24"/>
+
+
+    </Grid>
+</Page>
