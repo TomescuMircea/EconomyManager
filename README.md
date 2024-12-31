@@ -25,4 +25,5 @@ The goal was to collaborate across cultures and technical skills to build a func
 
 - **.NET Framework**
 - **UWP (Universal Windows Platform)**
+- **MySql Database**
 - **Clean Architecture**
